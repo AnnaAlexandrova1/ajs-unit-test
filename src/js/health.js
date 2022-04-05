@@ -1,11 +1,11 @@
-export function showHealth(item){
-    if(item.health >= 50){
-        return 'healthy';
-    }
-    else if(item.health >= 15 && item.health < 50){
-        return 'wounded';
-    }
-    else if(item.health < 15){
-        return 'critical'
-    }
+export default function showHealth(item) {
+  let value;
+  if (item.health >= 50) {
+    value = 'healthy';
+  } if (item.health >= 15 && item.health < 50) {
+    value = 'wounded';
+  } if (item.health < 15) {
+    value = 'critical';
+  }
+  return value;
 }
